@@ -5,8 +5,9 @@ package org.msgpack.io;
  * Date: 27.04.13
  * Time: 10:07
  */
+import org.msgpack.utils.ByteBuffer;
 import java.io.IOException;
-import java.nio.ByteBuffer;
+
 
 public interface Output {
     public void write(byte[] b, int off, int len) throws IOException;

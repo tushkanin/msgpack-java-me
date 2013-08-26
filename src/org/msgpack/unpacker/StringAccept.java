@@ -17,11 +17,12 @@
 //
 package org.msgpack.unpacker;
 
+import org.msgpack.utils.ByteBuffer;
 import org.msgpack.MessageTypeException;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.nio.ByteBuffer;
+
 
 final class StringAccept extends Accept {
     String value;

@@ -17,11 +17,12 @@
 //
 package org.msgpack.unpacker;
 
+import org.msgpack.utils.ByteBuffer;
 import org.msgpack.MessageTypeException;
 import org.msgpack.io.BufferReferer;
 
 import java.io.IOException;
-import java.nio.ByteBuffer;
+
 
 abstract class Accept implements BufferReferer {
     void acceptBoolean(boolean v) throws IOException {

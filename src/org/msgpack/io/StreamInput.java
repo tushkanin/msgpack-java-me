@@ -5,8 +5,10 @@ package org.msgpack.io;
  * Date: 27.04.13
  * Time: 10:41
  */
+import org.msgpack.utils.ByteBuffer;
+
 import java.io.InputStream;
-import java.nio.ByteBuffer;
+
 import java.io.IOException;
 import java.io.EOFException;
 
@@ -20,7 +22,7 @@ public class StreamInput extends AbstractInput {
     public StreamInput(InputStream in) {
         this.in = in;
         this.castBuffer = new byte[8];
-        this.castByteBuffer = ByteBuffer.wrap(castBuffer);
+        this.castByteBuffer = ByteBuffer.wrap(castBuffer);        
         this.filled = 0;
     }
 
@@ -72,28 +74,32 @@ public class StreamInput extends AbstractInput {
     }
 
     public short getShort() throws IOException {
-        require(2);
+        require(2);        
         return castByteBuffer.getShort(0);
     }
 
     public int getInt() throws IOException {
         require(4);
+        
         return castByteBuffer.getInt(0);
     }
 
     public long getLong() throws IOException {
         require(8);
-        return castByteBuffer.getInt(0);
+        
+        return castByteBuffer.getLong(0);
     }
 
     public float getFloat() throws IOException {
         require(4);
+        
         return castByteBuffer.getFloat(0);
     }
 
     public double getDouble() throws IOException {
         require(8);
-        return castByteBuffer.getFloat(0);
+       
+        return castByteBuffer.getDouble(0);
     }
 
     public void close() throws IOException {

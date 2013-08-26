@@ -15,10 +15,10 @@ public class MessageTypeException extends RuntimeException {
     }
 
     public MessageTypeException(String message, Throwable cause) {
-        super(message, cause);
+        super(message);
     }
 
     public MessageTypeException(Throwable cause) {
-        super(cause);
+        super();
     }
 }

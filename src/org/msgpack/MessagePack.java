@@ -6,9 +6,8 @@ package org.msgpack;
  * Time: 11:18
  */
 
-import org.msgpack.packer.MessagePackPacker;
 import org.msgpack.packer.Packer;
-import org.msgpack.unpacker.MessagePackUnpacker;
+
 import org.msgpack.unpacker.Unpacker;
 
 import java.io.InputStream;
@@ -21,12 +20,12 @@ public class MessagePack {
     }
 
     public Packer createPacker(OutputStream out) {
-        return new MessagePackPacker(out);
+        return new Packer(out);
     }
 
 
     public Unpacker createUnpacker(InputStream in) {
-        return new MessagePackUnpacker(in);
+        return new Unpacker(in);
     }
 
 

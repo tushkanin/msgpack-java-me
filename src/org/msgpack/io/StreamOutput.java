@@ -5,10 +5,11 @@ package org.msgpack.io;
  * Date: 27.04.13
  * Time: 10:08
  */
+import org.msgpack.utils.ByteBuffer;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.DataOutputStream;
-import java.nio.ByteBuffer;
+
 
 public class StreamOutput implements Output {
     private DataOutputStream out;
@@ -94,4 +95,5 @@ public class StreamOutput implements Output {
     public void close() throws IOException {
         out.close();
     }
+    
 }

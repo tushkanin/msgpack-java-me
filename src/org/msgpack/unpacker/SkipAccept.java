@@ -17,8 +17,9 @@
 //
 package org.msgpack.unpacker;
 
+import org.msgpack.utils.ByteBuffer;
 import java.io.IOException;
-import java.nio.ByteBuffer;
+
 
 final class SkipAccept extends Accept {
 
